@@ -1,0 +1,406 @@
+/* Base Styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Navbar Styles */
+nav {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.3s ease;
+}
+
+nav .navbar-nav a {
+  display: inline-block;
+  margin-inline: 3px !important;
+  position: relative;
+}
+
+nav .navbar-nav a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+
+nav .navbar-nav a:hover::before {
+  width: 100%;
+  border-bottom: 3px solid #fff !important;
+}
+
+nav .deep-menu li {
+  display: none !important;
+}
+
+nav .deep-menu:hover li {
+  display: inline-block !important;
+}
+
+li .dropdown-item {
+  color: black !important;
+}
+
+.navbar .navbar-nav a {
+  position: relative;
+}
+
+nav .active {
+  border-bottom: 2px solid #fff;
+}
+
+.navbar .dropdown-item {
+  transition: 0.5s;
+}
+
+.navbar .dropdown-menu a:hover {
+  color: #09c !important;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    background-color: #fff !important;
+  }
+  nav a {
+    color: #000 !important;
+    transition: 1s;
+  }
+  nav a:hover {
+    color: #0d6efd;
+  }
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 9999;
+}
+
+#scrollToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollToTop:hover {
+  background-color: #084298;
+}
+
+/* Home Section */
+#home {
+  background-image: linear-gradient(#000000b8, #000000d1),
+    url("../images/blog-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+
+#home h1 {
+  font-size: 80px;
+}
+
+#home .caption p {
+  font-size: 50px;
+}
+
+#home .caption h4 {
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+/* About Section */
+#about p span {
+  color: black;
+}
+
+#about .card-body span {
+  font-weight: 700;
+}
+
+#about a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#about .info h2::after {
+  content: "";
+  width: 110px;
+  height: 2px;
+  background-color: #09c;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+#about .info p {
+  padding-block: 20px;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+#about .container {
+  background-color: #fff;
+}
+
+/* Services Section */
+#services .s-info::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background-color: #09c;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item .card {
+  margin-block: 20px !important;
+}
+
+#services .icon {
+  border-radius: 50%;
+  border: 10px solid #09c !important;
+  transition: 0.4s;
+}
+
+#services .card:hover .icon {
+  border: 10px solid rgba(255, 255, 255, 0.5) !important;
+  color: #fff;
+  background-color: #09c;
+}
+
+/* Progress Section */
+#progress {
+  background-image: linear-gradient(#0078ff77, #0077ff),
+    url("../images/post-3.jpg");
+  background-attachment: fixed;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#progress .i {
+  border-radius: 50%;
+  border: 10px solid #ffffff99 !important;
+  transition: 0.4s;
+}
+
+/* Work Section */
+#work .w-info p::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background-color: #09c;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#work .more .img a {
+  border-radius: 50%;
+  border: 5px solid #0d6efd !important;
+}
+
+#work .detail .image {
+  overflow: hidden;
+}
+
+#work .detail .image img {
+  transition: 1s;
+}
+
+#work .detail:hover img {
+  transform: scale(1.2);
+}
+
+/* Slider Section */
+#slider {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient(#0078ff77, #0078ff),
+    url("../images/overlay-bg.jpg");
+}
+
+#slider .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+#slider .carousel-inner {
+  padding: 5rem !important;
+}
+
+#slider .img {
+  overflow: hidden !important;
+  margin: auto !important;
+  width: 150px !important;
+  border-radius: 50% !important;
+}
+
+/* Blog Section */
+#blog .b-info p::after {
+  content: "";
+  width: 55px;
+  height: 5px;
+  background-color: #09c;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#blog .b-body {
+  transform: translateY(-50%);
+}
+
+#blog .card-footer img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+#blog a {
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#blog a:hover {
+  color: #09c;
+}
+
+/* Contact Section */
+#contact {
+  min-height: 100vh;
+  box-shadow: 0 0 #09c;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#0078ff77, #0078ff),
+    url("../images/overlay-bg.jpg");
+}
+
+#contact .container h2::after {
+  content: "";
+  width: 110px;
+  height: 5px;
+  background-color: #09c;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+#contact .mail {
+  color: black;
+}
+
+#contact .icon .border-blue {
+  transition: 0.5s;
+  border-color: #09c !important;
+}
+
+#contact .icon a:hover {
+  background-color: #09c;
+  color: #fff;
+}
+
+/* Footer Section */
+#footer {
+  background-image: linear-gradient(#0078ff77, #0078ff),
+    url("../images/overlay-bg.jpg");
+}
+
+#footer span {
+  font-weight: bolder;
+}
+
+#footer a {
+  color: #fff;
+}
+
+/* Scroll Animation Styles */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes for sequential animation */
+.scroll-animate.delay-1 {
+  transition-delay: 0.1s;
+}
+.scroll-animate.delay-2 {
+  transition-delay: 0.2s;
+}
+.scroll-animate.delay-3 {
+  transition-delay: 0.3s;
+}
+.scroll-animate.delay-4 {
+  transition-delay: 0.4s;
+}
+.scroll-animate.delay-5 {
+  transition-delay: 0.5s;
+}
+.scroll-animate.delay-6 {
+  transition-delay: 0.6s;
+}
+
+/* Typing cursor effect */
+#auto-type::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
