@@ -34,4 +34,4 @@ A responsive portfolio website featuring scroll-based animations, smooth navigat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone https://github.com/AhmedDevHub/DemoDiv.git
